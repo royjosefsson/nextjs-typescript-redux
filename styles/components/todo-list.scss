@@ -1,0 +1,15 @@
+.todo-list {
+  display: flex;
+
+  &__li {
+    display: flex;
+
+    &:nth-child(2n) {
+      background: rgb(233, 233, 233);
+    }
+  }
+
+  &__task {
+    width: 40rem;
+  }
+}
