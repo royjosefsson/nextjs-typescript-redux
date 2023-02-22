@@ -2,11 +2,12 @@ import { addTask, resetTasks, finishTask, deleteTask } from "../store/todosSlice
 import { useDispatch } from "react-redux";
 import TodoList from "../components/TodoList/TodoList";
 import Form from "../components/Form/Form";
+import { Todo } from "../types/Todo";
 
 const Home = () => {
   const dispatch = useDispatch();
 
-  const createTask = (task: String) => {
+  const createTask = (task: string): Todo => {
     return { id: Date.now(), task, completed: false }
   }
 

@@ -23,6 +23,22 @@ ul {
   }
 }
 
+.display {
+  &__flex {
+    display: flex;
+  }
+}
+
+.max-width {
+  &__40rem {
+    max-width: 40rem;
+  }
+}
+
+.full-width {
+  width: 100vw;
+}
+
 .min-width {
   &__40rem {
     min-width: 40rem;

@@ -24,7 +24,7 @@ const Form = (props: FormProps) => {
   const formRef = useRef<HTMLFormElement>(null);
   return (
     <form ref={formRef} className="form">
-      <input name="task" type="text" className="min-width__40rem" />
+      <input name="task" type="text" className="full-width max-width__40rem" />
       <button onClick={handleOnAddTask} className="min-width__5rem m-l__1rem">Add</button>
     </form>
   )

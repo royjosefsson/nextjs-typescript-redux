@@ -4,7 +4,7 @@ import { Todo } from "../types/Todo";
 import { AppState } from "./store";
 
 export interface InitialTodosState {
-  todosState: any;
+  todosState: Todo[];
 }
 
 const initialState: InitialTodosState = {

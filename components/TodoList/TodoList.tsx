@@ -20,14 +20,16 @@ const TodoList = (props: TodoListProps) => {
   return (
     <>
       <div className="todo-list">
-        <ul>
+        <ul className="full-width max-width__40rem">
           {todosState.map((todo: Todo) => (
             <li key={todo.id} className="todo-list__li">
-              <div className={`min-width__40rem ${todo.completed ? "text-decoration__line-through" : ""}`.trim()}>
+              <div className={`todo-list__li__text ${todo.completed ? "text-decoration__line-through" : ""}`.trim()}>
                 {todo.task}
               </div>
-              <input className="m-l__1rem" type="checkbox" checked={todo.completed} onChange={() => onFinishTask(todo.id)} />
-              <button onClick={() => onDeleteTask(todo.id)}>x</button>
+              <div className="display__flex">
+                <input className="m-l__1rem" type="checkbox" checked={todo.completed} onChange={() => onFinishTask(todo.id)} />
+                <button onClick={() => onDeleteTask(todo.id)}>x</button>
+              </div>
             </li>
           ))}
         </ul>
